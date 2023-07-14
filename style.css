@@ -1,0 +1,102 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #8076a3;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+header .image {
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+header{
+    position: fixed;
+    top: 10px;
+    left: 0;
+}
+
+    
+header .image-text{
+    display: flex;
+    align-items: center;
+}
+
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .image-text .profession{
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+header .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .image img{
+    width: 40px;
+    border-radius: 6px;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 80%; /* Position the button 80% down from the top */
+}
+
+#quoteContainer {
+  display: none;
+  margin-top: 24px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#quoteText {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.glassmorphism-background {
+  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); 
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px; 
+  border:1px solid rgba(255, 255, 255, 0.18); 
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@media only screen and (max-width: 600px) {
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #quoteContainer {
+    max-width: 300px;
+    padding: 16px;
+  }
+
+  #quoteText {
+    font-size: 16px;
+  }
+}
