@@ -3,8 +3,6 @@ const englishButton = document.getElementById('englishButton');
 const quoteContainer = document.getElementById('quoteContainer');
 const quoteText = document.getElementById('quoteText');
 
-englishButton.addEventListener('click', generateQuote);
-hindiButton.addEventListener('click', generateHindi);
 async function generateQuote() {
   try {
     let d = await fetch("https://api.adviceslip.com/advice");
