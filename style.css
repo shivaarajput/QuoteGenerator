@@ -75,6 +75,11 @@ button {
   font-size: 18px;
   line-height: 1.5;
 }
+a {
+    color: inherit;  
+    text-decoration: none; 
+}
+
 
 .glassmorphism-background {
   backdrop-filter: blur(10px);
