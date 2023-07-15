@@ -1,9 +1,10 @@
-const quoteButton = document.getElementById('quoteButton');
+const hindiButton = document.getElementById('hindiButton');
+const englishButton = document.getElementById('englishButton');
 const quoteContainer = document.getElementById('quoteContainer');
 const quoteText = document.getElementById('quoteText');
 
-quoteButton.addEventListener('click', generateQuote);
-
+englishButton.addEventListener('click', generateQuote);
+hindiButton.addEventListener('click', generateHindi);
 async function generateQuote() {
   try {
     let d = await fetch("https://api.adviceslip.com/advice");
@@ -17,4 +18,17 @@ async function generateQuote() {
   }
 }
 
+
+async function generateHindi() {
+  try {
+    let d = await fetch("https://hindi-quotes.vercel.app/random");
+    let p = await d.json();
+    let randomQuote = p["quote"];
+    quoteText.textContent = randomQuote;
+    quoteContainer.style.display = 'block';
+    quoteContainer.classList.add('glassmorphism-background');
+  } catch (error) {
+    console.log('Error fetching quote:', error);
+  }
+}
 
