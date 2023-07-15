@@ -49,17 +49,6 @@ header .image img{
     border-radius: 6px;
 }
 
-button {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 80%; /* Position the button 80% down from the top */
-}
 
 #quoteContainer {
   text-align: center;
@@ -91,15 +80,31 @@ a {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+
+
+button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  top: 80%;
+  position: fixed;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.button-container button {
-  margin: 0 10px;
+#quoteButton {
+  display: flex;
+  padding: 12px 24px;
+  right: 35px; /* Adjusted to align the button to the left */
 }
+
+#hindiButton {
+  display: flex;
+  padding: 12px 24px;
+  left: 35px; /* Adjusted to align the button to the right */
+}
+
 
 
 @media only screen and (max-width: 600px) {
@@ -107,6 +112,7 @@ a {
     font-size: 14px;
     padding: 8px 16px;
   }
+
 
   #quoteContainer {
     max-width: 300px;
