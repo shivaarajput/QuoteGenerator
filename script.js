@@ -30,3 +30,4 @@ async function generateHindi() {
   }
 }
 
+generateQuote();
